@@ -3,9 +3,10 @@ pipeline {
   agent none
   stages{
     stage("build"){
+      steps{
       def z = new org.foo.Zot()
 z.checkOutFrom("Project1")
       //z.checkOutFrom("Project1")
-          
+      } 
       }}
 }
