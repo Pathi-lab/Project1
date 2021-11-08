@@ -14,7 +14,7 @@ pipeline {
           scriptApproval.pendingScripts.each{
             scriptApproval.approveScript(it.hash)
           }
-          jobDsl scriptText: 'job("example-4")'
+          jobDsl scriptText: 'job("example-5")'
 
       } 
       }
