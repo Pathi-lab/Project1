@@ -10,6 +10,7 @@ pipeline {
       //z.checkOutFrom("Project1")
           jobDsl scriptText: 'job("example-2")'
       } 
+      }
       }}
 
 }
