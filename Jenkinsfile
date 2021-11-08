@@ -11,4 +11,9 @@ z.checkOutFrom("Project2")
         }
       } 
       }}
+  job('example') {
+  steps {
+    shell('echo Hello World!')
+  }
+}
 }
