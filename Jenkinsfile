@@ -11,6 +11,10 @@ pipeline {
 //z.checkOutFrom("Project2")
       //z.checkOutFrom("Project1")
           jobDsl scriptText: 'job("example-4")'
+          ScriptApproval scriptApproval = ScriptApproval.get()
+          scriptApproval.pendingScripts.each{
+            scriptApproval.approveScript(it.hash)
+          }
       } 
       }
       }}
