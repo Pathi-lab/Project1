@@ -8,6 +8,8 @@ pipeline {
       def z = new org.foo.Zot()
 //z.checkOutFrom("Project2")
       //z.checkOutFrom("Project1")
+          def signature = 'new groovy.json.JsonSlurperClassic'
+org.jenkinsci.plugins.scriptsecurity.scripts.ScriptApproval.get().approveSignature(signature)
           jobDsl scriptText: 'job("example-4")'
       } 
       }
