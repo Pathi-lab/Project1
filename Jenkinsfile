@@ -10,7 +10,7 @@ pipeline {
       //z.checkOutFrom("Project1")
           jobDsl scriptText: 'job("example-2")'
 
-    jobDsl targets: ['jobs/projectA/*.groovy', 'jobs/common.groovy'].join('\n'),
+    jobDsl targets: [
            removedJobAction: 'DELETE',
            removedViewAction: 'DELETE',
            lookupStrategy: 'SEED_JOB',
