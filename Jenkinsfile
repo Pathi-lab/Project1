@@ -10,11 +10,12 @@ pipeline {
       def z = new org.foo.Zot()
 //z.checkOutFrom("Project2")
       //z.checkOutFrom("Project1")
-          jobDsl scriptText: 'job("example-4")'
-          ScriptApproval scriptApproval = ScriptApproval.get()
+                    ScriptApproval scriptApproval = ScriptApproval.get()
           scriptApproval.pendingScripts.each{
             scriptApproval.approveScript(it.hash)
           }
+          jobDsl scriptText: 'job("example-4")'
+
       } 
       }
       }}
