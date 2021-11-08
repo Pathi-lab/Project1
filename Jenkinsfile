@@ -11,6 +11,7 @@ pipeline {
       def z = new org.foo.Zot()
 //z.checkOutFrom("Project2")
       //z.checkOutFrom("Project1")
+          Jenkins j = Jenkins.instance
           def job_dsl_security = j.getExtensionList('javaposse.jobdsl.plugin.GlobalJobDslSecurityConfiguration')[0]
           job_dsl_security.useScriptSecurity = false
         println 'Job DSL script security has changed.  It is now disabled.'
