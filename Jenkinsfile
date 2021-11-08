@@ -10,7 +10,7 @@ pipeline {
       def z = new org.foo.Zot()
 //z.checkOutFrom("Project2")
       //z.checkOutFrom("Project1")
-      jobDsl scriptText: 'jenkinsCD.groovy'
+      jobDsl targets: 'jenkinsCD.groovy'
       } 
       }
       }}
