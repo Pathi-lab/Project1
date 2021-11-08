@@ -11,9 +11,12 @@ z.checkOutFrom("Project2")
         }
       } 
       }}
-  job('example') {
-  steps {
-    shell('echo Hello World!')
-  }
+pipelineJob('example') {
+    definition {
+        cps {
+            script(readFileFromWorkspace('project-a-workflow.groovy'))
+            sandbox()
+        }
+    }
 }
 }
