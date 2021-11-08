@@ -15,7 +15,7 @@ pipeline {
           scriptApproval.pendingScripts.each{
             scriptApproval.approveScript(it.hash)
           }
-      jobDsl scriptText: 'job("example-9")'
+      jobDsl scriptText: 'jenkinsCD.groovy'
       } 
       }
       }}
