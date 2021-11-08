@@ -1,5 +1,6 @@
 @Library('my-shared-library') _
 import org.jenkinsci.plugins.scriptsecurity.scripts.*
+import jenkins.model.Jenkins
   
 pipeline {
   agent any
